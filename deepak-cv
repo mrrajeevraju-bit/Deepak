@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Deepak Kumar CV</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{
+  width:210mm;height:297mm;
+  font-family:'Inter',sans-serif;
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact;
+  background:#fff;
+}
+.cv{
+  width:210mm;height:297mm;
+  display:grid;grid-template-columns:72mm 1fr;
+  overflow:hidden;
+}
+
+/* ══ LEFT ══ */
+.left{
+  background:#0f2133;
+  height:297mm;
+  display:flex;flex-direction:column;
+}
+
+.left-top{
+  background:linear-gradient(160deg,#1b3a5c,#0f2133);
+  padding:26px 20px 20px;
+  text-align:center;
+  position:relative;
+  flex-shrink:0;
+}
+.left-top::after{
+  content:'';position:absolute;bottom:0;left:10%;width:80%;height:2px;
+  background:linear-gradient(90deg,transparent,#f97316,transparent);
+}
+.photo-ring{
+  width:108px;height:108px;border-radius:50%;
+  background:linear-gradient(135deg,#f97316,#fb923c);
+  padding:3px;margin:0 auto 13px;
+  box-shadow:0 0 0 4px rgba(249,115,22,0.2),0 8px 28px rgba(0,0,0,0.4);
+}
+.photo-ring img{
+  width:100%;height:100%;border-radius:50%;
+  object-fit:cover;object-position:center top;
+  border:3px solid #0f2133;display:block;
+}
+.l-name{font-size:16px;font-weight:800;color:#fff;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2;}
+.l-role{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.5);
+  color:#fdba74;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:4px 13px;border-radius:20px;margin-top:9px;
+}
+
+.left-body{
+  flex:1;
+  padding:0 18px 16px;
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+}
+
+.lb{}
+
+.lt{
+  display:flex;align-items:center;gap:6px;
+  font-size:8.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:#f97316;padding-bottom:5px;margin-bottom:7px;
+  border-bottom:1px solid rgba(249,115,22,0.25);
+}
+
+.ci{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px;}
+.ci:last-child{margin-bottom:0;}
+.ci-ico{
+  width:22px;height:22px;border-radius:5px;flex-shrink:0;
+  background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);
+  display:flex;align-items:center;justify-content:center;font-size:10px;
+}
+.ci-txt{font-size:10px;color:#94b0c8;line-height:1.45;padding-top:2px;}
+
+.sk{margin-bottom:7px;}
+.sk:last-child{margin-bottom:0;}
+.sk-h{display:flex;justify-content:space-between;margin-bottom:4px;}
+.sk-h span:first-child{font-size:10px;color:#c8dce8;font-weight:500;}
+.sk-h span:last-child{font-size:9px;color:#f97316;font-weight:700;}
+.sk-bg{height:5px;background:rgba(255,255,255,0.07);border-radius:3px;}
+.sk-f{height:5px;border-radius:3px;background:linear-gradient(90deg,#f97316,#fdba74);}
+
+.lang-row{display:flex;gap:7px;}
+.lang-tag{
+  background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.35);
+  color:#fdba74;font-size:10px;font-weight:600;
+  padding:4px 14px;border-radius:20px;
+}
+
+.str{display:flex;align-items:center;gap:8px;font-size:10px;color:#94b0c8;margin-bottom:6px;}
+.str:last-child{margin-bottom:0;}
+.str::before{content:'';width:6px;height:6px;border-radius:50%;background:#f97316;flex-shrink:0;}
+
+.hob-row{display:flex;flex-wrap:wrap;gap:6px;}
+.hob{
+  display:flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  color:#94b0c8;font-size:10px;padding:4px 10px;border-radius:5px;
+}
+
+/* ══ RIGHT ══ */
+.right{
+  background:#fff;height:297mm;
+  display:flex;flex-direction:column;
+}
+
+.r-topbar{height:6px;background:linear-gradient(90deg,#0f2133,#1b3a5c);flex-shrink:0;}
+
+.r-header{
+  padding:20px 24px 15px;
+  border-bottom:2px solid #f0f0f0;
+  background:linear-gradient(135deg,#fff 60%,#fff8f2);
+  flex-shrink:0;
+}
+.r-header h1{font-size:27px;font-weight:900;color:#0f2133;letter-spacing:2px;text-transform:uppercase;line-height:1;}
+.r-header h1 span{color:#f97316;}
+.r-sub{font-size:9.5px;font-weight:700;color:#f97316;letter-spacing:2px;text-transform:uppercase;margin-top:5px;}
+.r-quote{font-size:9.5px;color:#888;font-style:italic;margin-top:7px;line-height:1.55;padding-left:10px;border-left:3px solid #f97316;}
+
+.r-body{
+  flex:1;padding:0 24px 14px;
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+}
+
+.rb{}
+
+.rtitle{
+  display:flex;align-items:center;gap:8px;
+  font-size:8.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:#0f2133;margin-bottom:8px;margin-top:12px;
+}
+.rtitle::before{content:'';width:4px;height:15px;background:linear-gradient(180deg,#f97316,#fdba74);border-radius:2px;flex-shrink:0;}
+.rtitle::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#e8e8e8,transparent);}
+
+.obj{
+  background:linear-gradient(135deg,#fffbf6,#fff8f0);
+  border-left:3px solid #f97316;border-radius:0 7px 7px 0;
+  padding:11px 14px;font-size:10.5px;color:#444;line-height:1.7;
+}
+
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.edu-card{background:#f8fafc;border-radius:8px;padding:10px 12px;border-top:3px solid #f97316;}
+.edu-card .dg{font-size:10.5px;font-weight:700;color:#0f2133;line-height:1.3;}
+.edu-card .ins{font-size:9.5px;color:#888;margin-top:3px;line-height:1.3;}
+.edu-card .bdg{display:inline-block;background:#0f2133;color:#fff;font-size:8.5px;font-weight:600;padding:2px 9px;border-radius:10px;margin-top:6px;}
+
+.cert{
+  background:linear-gradient(135deg,#0f2133,#1b3a5c);
+  border-radius:10px;padding:14px 18px;
+  display:flex;align-items:center;gap:14px;
+}
+.cert-ico{
+  width:46px;height:46px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,#f97316,#fb923c);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;box-shadow:0 6px 16px rgba(249,115,22,0.4);
+}
+.cert h4{font-size:12px;font-weight:700;color:#fff;}
+.cert p{font-size:10px;color:#94b0c8;margin-top:3px;}
+.cert .ctag{display:inline-block;background:#f97316;color:#fff;font-size:8.5px;font-weight:700;padding:2px 10px;border-radius:10px;margin-top:6px;}
+
+.comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;}
+.comp{display:flex;align-items:center;gap:8px;background:#f8fafc;border-radius:7px;padding:8px 11px;border-left:3px solid #f97316;}
+.comp .ico{font-size:14px;}
+.comp span{font-size:10px;color:#333;font-weight:500;}
+
+.soft-row{display:flex;flex-wrap:wrap;gap:7px;}
+.sc{background:#fff;border:1.5px solid #0f2133;color:#0f2133;font-size:10px;font-weight:600;padding:5px 12px;border-radius:20px;}
+
+.btm{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+
+.prow{display:flex;gap:6px;font-size:10.5px;color:#555;padding:4.5px 0;border-bottom:1px solid #f2f2f2;}
+.prow:last-child{border-bottom:none;}
+.prow strong{color:#0f2133;font-weight:600;min-width:95px;flex-shrink:0;}
+
+.decl{background:#f8fafc;border-radius:8px;padding:12px 13px;font-size:9.5px;color:#666;font-style:italic;line-height:1.65;display:flex;flex-direction:column;justify-content:space-between;}
+.signrow{margin-top:12px;}
+.signrow .top-row{display:flex;justify-content:space-between;align-items:flex-end;}
+.signrow .place-date{font-size:9.5px;color:#444;}
+.signrow .place-date div{margin-bottom:4px;}
+.signrow .place-date strong{color:#0f2133;}
+.sig-line{border-bottom:1.5px solid #0f2133;width:95px;margin-bottom:3px;}
+.sig-label{font-size:8px;color:#999;letter-spacing:1px;text-align:center;}
+
+@media print{html,body{width:210mm;height:297mm;margin:0;padding:0;}.cv{box-shadow:none;}}
+@page{size:A4 portrait;margin:0;}
+</style>
+</head>
+<body>
+<div class="cv">
+
+<!-- ══ LEFT ══ -->
+<div class="left">
+  <div class="left-top">
+    <div class="photo-ring">
+      <img src="https://enunrwwvaeizskpmemvz.supabase.co/storage/v1/object/public/images/f95b715a-d0db-4ce1-92b3-42815c994099.jpg" alt="Deepak Kumar"/>
+    </div>
+    <div class="l-name">Deepak<br>Kumar</div>
+    <div class="l-role">🔥 Fire &amp; Safety</div>
+  </div>
+
+  <div class="left-body">
+
+    <div class="lb">
+      <div class="lt">📞 Contact</div>
+      <div class="ci"><div class="ci-ico">📱</div><div class="ci-txt">+91 99313 70698</div></div>
+      <div class="ci"><div class="ci-ico">🎂</div><div class="ci-txt">02 February 2008</div></div>
+      <div class="ci"><div class="ci-ico">✉️</div><div class="ci-txt" style="font-size:9px">kumardeepak843127@gmail.com</div></div>
+      <div class="ci"><div class="ci-ico">📍</div><div class="ci-txt">Vill. Tajpur, Post Baburban<br>PS Baruraj, Dist. Muzaffarpur<br>Bihar – 843127</div></div>
+    </div>
+
+    <div class="lb">
+      <div class="lt">⚡ Skills</div>
+      <div class="sk"><div class="sk-h"><span>Workplace Safety</span><span>95%</span></div><div class="sk-bg"><div class="sk-f" style="width:95%"></div></div></div>
+      <div class="sk"><div class="sk-h"><span>Attention to Detail</span><span>92%</span></div><div class="sk-bg"><div class="sk-f" style="width:92%"></div></div></div>
+      <div class="sk"><div class="sk-h"><span>Regulatory Compliance</span><span>90%</span></div><div class="sk-bg"><div class="sk-f" style="width:90%"></div></div></div>
+      <div class="sk"><div class="sk-h"><span>Communication</span><span>88%</span></div><div class="sk-bg"><div class="sk-f" style="width:88%"></div></div></div>
+      <div class="sk"><div class="sk-h"><span>Administrative Skills</span><span>83%</span></div><div class="sk-bg"><div class="sk-f" style="width:83%"></div></div></div>
+      <div class="sk"><div class="sk-h"><span>Word Processing</span><span>80%</span></div><div class="sk-bg"><div class="sk-f" style="width:80%"></div></div></div>
+    </div>
+
+    <div class="lb">
+      <div class="lt">🌐 Languages</div>
+      <div class="lang-row"><span class="lang-tag">Hindi</span><span class="lang-tag">English</span></div>
+    </div>
+
+    <div class="lb">
+      <div class="lt">💪 Strengths</div>
+      <div class="str">Honest &amp; Reliable</div>
+      <div class="str">Quick Learner</div>
+      <div class="str">Hardworking</div>
+      <div class="str">Responsible &amp; Dedicated</div>
+    </div>
+
+    <div class="lb">
+      <div class="lt">🎯 Hobbies</div>
+      <div class="hob-row">
+        <div class="hob">📚 Reading</div>
+        <div class="hob">🎵 Music</div>
+        <div class="hob">✈️ Traveling</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ RIGHT ══ -->
+<div class="right">
+  <div class="r-topbar"></div>
+
+  <div class="r-header">
+    <h1>Deepak <span>Kumar</span></h1>
+    <div class="r-sub">🔥 Fire &amp; Safety Professional &nbsp;·&nbsp; Fresher</div>
+    <div class="r-quote">Committed to creating safer workplaces through knowledge, discipline &amp; proactive safety practices.</div>
+  </div>
+
+  <div class="r-body">
+
+    <div class="rb">
+      <div class="rtitle">Career Objective</div>
+      <div class="obj">To secure a challenging position in Fire &amp; Safety management where I can apply my technical expertise, regulatory compliance knowledge, and proactive attitude to maintain a safe work environment — while continuously growing professionally and contributing to organizational excellence.</div>
+    </div>
+
+    <div class="rb">
+      <div class="rtitle">Education</div>
+      <div class="edu-grid">
+        <div class="edu-card"><div class="dg">Bachelor of Arts (Part 2)</div><div class="ins">BRABU University, Muzaffarpur</div><span class="bdg">Pursuing</span></div>
+        <div class="edu-card"><div class="dg">12th – Arts Stream</div><div class="ins">Bihar School Exam. Board, Patna</div><span class="bdg">Passed</span></div>
+        <div class="edu-card"><div class="dg">10th – Matriculation</div><div class="ins">Bihar School Exam. Board, Patna</div><span class="bdg">Passed</span></div>
+      </div>
+    </div>
+
+    <div class="rb">
+      <div class="rtitle">Certification</div>
+      <div class="cert">
+        <div class="cert-ico">🔥</div>
+        <div>
+          <h4>Diploma in Fire and Safety (DFS)</h4>
+          <p>National Academy of Safety Professionals, Muzaffarpur</p>
+          <span class="ctag">✅ Certified &nbsp;·&nbsp; Group: Fire &amp; Safety</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb">
+      <div class="rtitle">Key Competencies</div>
+      <div class="comp-grid">
+        <div class="comp"><span class="ico">🛡️</span><span>Hazard Identification</span></div>
+        <div class="comp"><span class="ico">🚨</span><span>Emergency Response</span></div>
+        <div class="comp"><span class="ico">📋</span><span>Safety Audits</span></div>
+        <div class="comp"><span class="ico">⚠️</span><span>Risk Assessment</span></div>
+        <div class="comp"><span class="ico">🧯</span><span>Fire Fighting</span></div>
+        <div class="comp"><span class="ico">📑</span><span>Incident Reporting</span></div>
+      </div>
+    </div>
+
+    <div class="rb">
+      <div class="rtitle">Soft Skills</div>
+      <div class="soft-row">
+        <span class="sc">🧩 Problem Solving</span>
+        <span class="sc">💬 Communication</span>
+        <span class="sc">👥 Teamwork</span>
+        <span class="sc">🤝 Negotiation</span>
+        <span class="sc">⏱️ Time Management</span>
+        <span class="sc">🔄 Adaptability</span>
+      </div>
+    </div>
+
+    <div class="btm">
+      <div>
+        <div class="rtitle" style="margin-top:0">Personal Details</div>
+        <div class="prow"><strong>Father's Name</strong>Shreekant Bhagat</div>
+        <div class="prow"><strong>Date of Birth</strong>02 February 2008</div>
+        <div class="prow"><strong>Gender</strong>Male</div>
+        <div class="prow"><strong>Nationality</strong>Indian</div>
+        <div class="prow"><strong>Religion</strong>Hindu</div>
+        <div class="prow"><strong>Marital Status</strong>Unmarried</div>
+        <div class="prow"><strong>Category</strong>General</div>
+      </div>
+      <div>
+        <div class="rtitle" style="margin-top:0">Declaration</div>
+        <div class="decl">
+          I hereby declare that all the information furnished above is true and correct to the best of my knowledge and belief. If given an opportunity, I assure you I will fulfil all requirements to the best of my ability.
+          <div class="signrow">
+            <div class="top-row">
+              <div class="place-date">
+                <div>Place: <strong>Muzaffarpur</strong></div>
+                <div>Date: <strong>___________</strong></div>
+              </div>
+              <div>
+                <div class="sig-line"></div>
+                <div class="sig-label">SIGNATURE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</body>
+</html>
