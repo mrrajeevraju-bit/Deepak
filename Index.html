@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Kumar | Premium CV</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg: #030408;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --accent-primary: #6366f1;
+    --accent-secondary: #ec4899;
+    --accent-tertiary: #f59e0b;
+    --text-main: #e2e8f0;
+    --text-dim: #94a3b8;
+    --border: rgba(255, 255, 255, 0.08);
+    --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f59e0b 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background: var(--bg); 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+}
+
+/* Page Layout */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+}
+
+/* Background Effects */
+.glow-top { position: absolute; top: -10%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%); pointer-events: none; }
+.glow-bottom { position: absolute; bottom: -5%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%); pointer-events: none; }
+.grid-overlay { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; }
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-main h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 10px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border-left: 3px solid var(--accent-primary);
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Contact Grid */
+.contact-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 12px 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+}
+
+.contact-item span { color: var(--accent-primary); font-size: 16px; }
+
+/* Main Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 40px;
+}
+
+section { margin-bottom: 35px; }
+
+.section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-secondary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* Experience Card */
+.exp-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.exp-card::before {
+    content: 'ACTIVE';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 9px;
+    font-weight: 800;
+    background: #22c55e;
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.role-title { font-family: 'Syne', sans-serif; font-size: 20px; color: #fff; }
+.comp-name { color: var(--accent-primary); font-weight: 700; margin-bottom: 15px; display: block; }
+.exp-list { list-style: none; }
+.exp-list li { margin-bottom: 10px; font-size: 13px; color: var(--text-dim); display: flex; gap: 10px; }
+.exp-list li::before { content: '→'; color: var(--accent-secondary); }
+
+/* Skill Pills */
+.skill-container { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.skill-pill:hover { border-color: var(--accent-primary); background: rgba(99,102,241,0.1); }
+
+/* Sidebar Elements */
+.ai-expertise {
+    background: var(--gradient);
+    padding: 1px;
+    border-radius: 15px;
+}
+.ai-inner {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.strength-item {
+    margin-bottom: 15px;
+}
+.strength-label { display: block; font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+.strength-bar { height: 6px; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
+.strength-fill { height: 100%; background: var(--accent-primary); }
+
+/* Education & Personal */
+.edu-item { margin-bottom: 20px; border-left: 2px solid var(--accent-tertiary); padding-left: 15px; }
+.edu-degree { font-weight: 700; color: #fff; display: block; }
+.edu-info { font-size: 12px; color: var(--text-dim); }
+
+.personal-info { font-size: 12px; }
+.info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); }
+.info-row span:first-child { color: var(--text-dim); }
+
+@media print {
+    .page { margin: 0; padding: 20px; }
+    body { background: #fff; color: #000; }
+    .page { background: #fff; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+    <div class="glow-top"></div>
+    <div class="glow-bottom"></div>
+    <div class="grid-overlay"></div>
+
+    <header>
+        <div class="profile-main">
+            <span class="tagline">Visionary Entrepreneur</span>
+            <h1>Abhishek Kumar</h1>
+            <p style="color: var(--text-dim); font-weight: 500;">Founder & CEO at OnyXplus</p>
+        </div>
+        <div style="text-align: right;">
+            <div style="width: 80px; height: 80px; background: var(--gradient); border-radius: 18px; padding: 3px;">
+                <img src="https://www.onyxplus.in/assets/logo-icon-Dyxd6BDa.png" style="width: 100%; height: 100%; border-radius: 15px; background: #000;" alt="Logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-strip">
+        <div class="contact-item"><span>📞</span> +91 70792 04621</div>
+        <div class="contact-item"><span>✉️</span> abhishekkumarmahto379@gmail.com</div>
+        <div class="contact-item"><span>🌐</span> onyxplus.in</div>
+    </div>
+
+    <div class="content-grid">
+        <div class="left-col">
+            <section>
+                <div class="section-title">Professional Summary</div>
+                <p style="font-size: 14px; color: var(--text-dim); text-align: justify;">
+                    At just 17, I am bridging the gap between traditional marketing and the AI-driven future. As the founder of OnyXplus, I specialize in building automated ecosystems that scale businesses. My approach combines technical precision in "Vibe Coding" with a deep understanding of market psychology.
+                </p>
+            </section>
+
+            <section>
+                <div class="section-title">Work Experience</div>
+                <div class="exp-card">
+                    <span class="role-title">CEO & Founder</span>
+                    <span class="comp-name">OnyXplus Digital Agency</span>
+                    <p style="font-size: 11px; color: var(--accent-secondary); margin-bottom: 12px; font-weight: 700;">SEPT 2025 — PRESENT</p>
+                    <ul class="exp-list">
+                        <li>Architected and deployed end-to-end AI automation for client acquisition.</li>
+                        <li>Lead a multi-disciplinary team focusing on SEO, Meta Ads, and Content Strategy.</li>
+                        <li>Scaled agency operations from concept to a fully functional digital ecosystem.</li>
+                        <li>Specialized in high-conversion PPC campaigns and organic search dominance.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Core Competencies</div>
+                <div class="skill-container">
+                    <span class="skill-pill">AI Automation</span>
+                    <span class="skill-pill">Prompt Engineering</span>
+                    <span class="skill-pill">Vibe Coding</span>
+                    <span class="skill-pill">SEO Mastery</span>
+                    <span class="skill-pill">Meta & Google Ads</span>
+                    <span class="skill-pill">n8n Workflows</span>
+                    <span class="skill-pill">Strategic Branding</span>
+                    <span class="skill-pill">Script Writing</span>
+                    <span class="skill-pill">Full-Stack Thinking</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-col">
+            <section>
+                <div class="section-title">AI Tech Stack</div>
+                <div class="ai-expertise">
+                    <div class="ai-inner">
+                        <div class="strength-item">
+                            <span class="strength-label">Prompt Engineering (3Y)</span>
+                            <div class="strength-bar"><div class="strength-fill" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Workflow Automation (n8n)</span>
+                            <div class="strength-bar"><div class="strength-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">LLM Fine-tuning</span>
+                            <div class="strength-bar"><div class="strength-fill" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Education</div>
+                <div class="edu-item">
+                    <span class="edu-degree">Higher Secondary (12th)</span>
+                    <span class="edu-info">BSEB, Patna | Science Stream</span>
+                    <p style="font-size: 10px; color: var(--accent-primary); margin-top: 5px;">COMPLETED 2026</p>
+                </div>
+                <div class="edu-item">
+                    <span class="edu-degree">Matriculation (10th)</span>
+                    <span class="edu-info">BSEB, Patna</span>
+                    <p style="font-size: 10px; color: var(--accent-primary); margin-top: 5px;">COMPLETED 2024</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-title">Personal Metrics</div>
+                <div class="personal-info">
+                    <div class="info-row"><span>Age</span><span>17 Years</span></div>
+                    <div class="info-row"><span>Location</span><span>Muzaffarpur, Bihar</span></div>
+                    <div class="info-row"><span>Languages</span><span>Hindi, English</span></div>
+                    <div class="info-row"><span>Interests</span><span>Tech, Travel, Logic</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <p style="font-size: 10px; color: var(--text-dim); max-width: 400px; font-style: italic;">
+                    I hereby declare that all information provided is authentic and reflects my true professional journey and capabilities.
+                </p>
+            </div>
+            <div style="text-align: right;">
+                <p style="font-family: 'Syne', sans-serif; font-size: 18px; color: #fff;">Abhishek Kumar</p>
+                <p style="font-size: 9px; letter-spacing: 2px; color: var(--accent-primary);">DIGITAL SIGNATURE</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
