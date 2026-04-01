@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abhishek Kumar | Founder OnyXplus</title>
+<title>Abhishek Kumar | Founder & Digital Expert</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
@@ -11,7 +11,6 @@
     --bg: #05060a;
     --accent-primary: #6366f1;
     --accent-secondary: #ec4899;
-    --accent-tertiary: #f59e0b;
     --text-main: #f8fafc;
     --text-dim: #94a3b8;
     --border: rgba(255, 255, 255, 0.1);
@@ -20,254 +19,189 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 
-body { 
-    background: var(--bg); 
-    font-family: 'Plus Jakarta Sans', sans-serif; 
-    color: var(--text-main);
-    overflow-x: hidden;
-}
+body { background: var(--bg); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-main); }
 
-/* Floating Print Button */
 .print-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding: 12px 25px;
-    background: var(--gradient);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
-    z-index: 1000;
-    font-family: 'Syne', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: fixed; bottom: 20px; right: 20px; padding: 10px 20px;
+    background: var(--gradient); color: white; border: none; border-radius: 50px;
+    font-weight: 800; cursor: pointer; z-index: 1000; font-family: 'Syne', sans-serif;
 }
 
-/* A4 Container Setup */
+/* A4 Page Setup */
 .page {
-    width: 210mm;
-    height: 297mm;
-    margin: 20px auto;
-    background: var(--bg);
-    position: relative;
-    padding: 40px;
-    border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
+    width: 210mm; height: 297mm; margin: 10px auto; background: var(--bg);
+    position: relative; padding: 25px 35px; border: 1px solid var(--border);
+    display: flex; flex-direction: column; overflow: hidden;
 }
 
-.orb { position: absolute; border-radius: 50%; filter: blur(60px); z-index: 0; opacity: 0.2; pointer-events: none; }
-.orb-1 { top: -50px; right: -50px; width: 300px; height: 300px; background: var(--accent-primary); }
-.orb-2 { bottom: -50px; left: -50px; width: 250px; height: 250px; background: var(--accent-secondary); }
+/* Header */
+.header { display: flex; align-items: center; gap: 25px; margin-bottom: 20px; position: relative; z-index: 10; }
+.profile-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-primary); padding: 3px; }
+.header-info h1 { font-family: 'Syne', sans-serif; font-size: 36px; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+.header-info p { color: var(--accent-primary); font-weight: 700; font-size: 14px; letter-spacing: 1px; margin-top: 5px; }
 
-/* Header Section */
-.header {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
-    z-index: 10;
-}
-
-.profile-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--accent-primary);
-    padding: 3px;
-    background: var(--bg);
-}
-
-.header-content h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: 42px;
-    line-height: 1;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 5px;
-}
-
+/* Contact Bar */
 .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    background: rgba(255,255,255,0.03);
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid var(--border);
-    font-size: 11px;
-    margin-bottom: 30px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    background: rgba(255,255,255,0.03); padding: 12px; border-radius: 12px;
+    border: 1px solid var(--border); font-size: 10px; margin-bottom: 20px;
 }
 
-/* Content Layout */
-.main-content {
-    display: grid;
-    grid-template-columns: 1.6fr 1fr;
-    gap: 30px;
-    flex-grow: 1;
-}
+/* Layout Columns */
+.main-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 25px; flex: 1; }
 
 .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 12px;
-    color: var(--accent-secondary);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 5px;
+    font-family: 'Syne', sans-serif; font-size: 11px; color: var(--accent-secondary);
+    text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px;
+    border-bottom: 1px solid var(--border); padding-bottom: 4px;
 }
 
-.card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid var(--border);
-    padding: 20px;
-    border-radius: 18px;
-    margin-bottom: 20px;
+/* Cards & Lists */
+.card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); padding: 15px; border-radius: 12px; margin-bottom: 15px; }
+.card h3 { font-size: 14px; margin-bottom: 4px; color: #fff; }
+.card-sub { font-size: 11px; color: var(--accent-primary); font-weight: 700; margin-bottom: 8px; display: block; }
+.card p { font-size: 11.5px; color: var(--text-dim); line-height: 1.5; }
+
+/* Skill Grid - All Skills Included */
+.skill-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.skill-item { 
+    background: rgba(255,255,255,0.05); padding: 8px; border-radius: 8px; 
+    font-size: 10.5px; border-left: 3px solid var(--accent-primary);
 }
+.skill-item strong { display: block; color: #fff; }
 
-.pill-container { display: flex; flex-wrap: wrap; gap: 8px; }
-.pill {
-    background: #111;
-    border: 1px solid var(--border);
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 600;
-}
+/* Timeline for Education */
+.edu-item { margin-bottom: 12px; padding-left: 15px; border-left: 2px solid var(--accent-secondary); }
+.edu-item h4 { font-size: 13px; color: #fff; }
+.edu-item p { font-size: 11px; color: var(--text-dim); }
 
-/* Sidebar Specifics */
-.stat-box { margin-bottom: 15px; }
-.stat-label { font-size: 10px; font-weight: 800; display: block; margin-bottom: 4px; }
-.stat-bar { height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
-.stat-fill { height: 100%; background: var(--gradient); }
+/* Sidebar Stats */
+.stat-row { margin-bottom: 10px; }
+.stat-label { font-size: 9px; font-weight: 800; color: var(--text-dim); display: flex; justify-content: space-between; margin-bottom: 3px; }
+.stat-bar { height: 5px; background: rgba(255,255,255,0.05); border-radius: 10px; }
+.stat-fill { height: 100%; background: var(--gradient); border-radius: 10px; }
 
-/* ═══ PRINT STYLES ═══ */
 @media print {
     @page { size: A4; margin: 0; }
     body { background: white !important; }
     .print-btn { display: none !important; }
-    .page { 
-        margin: 0; 
-        border: none; 
-        width: 210mm; 
-        height: 297mm; 
-        padding: 10mm;
-        background: #05060a !important; /* Printing in Dark for Premium Look */
-    }
-    /* Ensure colors print */
-    * { -webkit-print-color-adjust: exact !important; color-adjust: exact !important; }
+    .page { margin: 0; border: none; width: 210mm; height: 297mm; background: #05060a !important; }
+    * { -webkit-print-color-adjust: exact !important; }
 }
-
 </style>
 </head>
 <body>
 
-<button class="print-btn" onclick="window.print()">
-    <span>🖨️</span> Save as PDF
-</button>
+<button class="print-btn" onclick="window.print()">🖨️ Download Full CV</button>
 
 <div class="page">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-
     <header class="header">
-        <img src="https://enunrwwvaeizskpmemvz.supabase.co/storage/v1/object/public/images/6f6694e5-2826-4d1a-b4f1-5bf342444f86.jpg" class="profile-img" alt="Abhi">
-        <div class="header-content">
-            <span style="font-size: 10px; font-weight: 800; color: var(--accent-primary); letter-spacing: 2px;">DIGITAL ENTREPRENEUR</span>
+        <img src="https://enunrwwvaeizskpmemvz.supabase.co/storage/v1/object/public/images/6f6694e5-2826-4d1a-b4f1-5bf342444f86.jpg" class="profile-img" alt="Abhishek">
+        <div class="header-info">
             <h1>Abhishek Kumar</h1>
-            <p style="color: var(--text-dim); font-size: 14px;">Founder & CEO of <strong>OnyXplus</strong></p>
+            <p>FOUNDER & CEO • ONYXPLUS DIGITAL</p>
+            <div style="margin-top: 8px;">
+                <span style="font-size: 9px; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; color: var(--text-dim);">AI EXPERT</span>
+                <span style="font-size: 9px; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; color: var(--text-dim); margin-left: 5px;">VIBE CODER</span>
+            </div>
         </div>
-        <img src="https://www.onyxplus.in/assets/logo-icon-Dyxd6BDa.png" style="width: 50px; margin-left: auto;" alt="Logo">
+        <img src="https://www.onyxplus.in/assets/logo-icon-Dyxd6BDa.png" style="width: 50px; margin-left: auto;">
     </header>
 
     <div class="contact-grid">
-        <div><strong>📞 Phone:</strong> +91 70792 04621</div>
-        <div><strong>✉️ Email:</strong> abhishekkumarmahto379@gmail.com</div>
-        <div><strong>🌐 Website:</strong> onyxplus.in</div>
-        <div><strong>📍 Address:</strong> Muzaffarpur, Bihar - 843127</div>
+        <div><strong>📞</strong> +91 70792 04621</div>
+        <div><strong>✉️</strong> abhishekkumarmahto379@gmail.com</div>
+        <div><strong>🌐</strong> onyxplus.in</div>
+        <div><strong>📍</strong> Muzaffarpur, Bihar</div>
     </div>
 
-    <div class="main-content">
+    <div class="main-grid">
         <div class="left-col">
             <section>
-                <div class="section-title">The Vision</div>
-                <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 25px; line-height: 1.6;">
-                    Leading <strong>OnyXplus</strong> to become India's premier digital ecosystem. Specialized in high-performance AI automation, conversion-optimized marketing, and next-gen "Vibe Coding." Building solutions that aren't just tools, but assets.
-                </p>
-            </section>
-
-            <section>
-                <div class="section-title">Experience</div>
+                <div class="section-title">Core Ventures</div>
                 <div class="card">
-                    <h3 style="font-size: 16px;">Founder & CEO</h3>
-                    <p style="color: var(--accent-primary); font-size: 12px; font-weight: 700;">OnyXplus Digital Agency • 2025 - Present</p>
-                    <ul style="font-size: 12px; color: var(--text-dim); margin-top: 10px; list-style: none;">
-                        <li style="margin-bottom: 5px;">• Built and deployed multi-agent AI marketing workflows.</li>
-                        <li style="margin-bottom: 5px;">• Specialized in Meta Ads with a focus on high ROAS.</li>
-                        <li style="margin-bottom: 5px;">• Developing a native search engine concept for the Indian market.</li>
-                    </ul>
+                    <h3>OnyXplus Digital Agency</h3>
+                    <span class="card-sub">Founder & CEO | 2025 - Present</span>
+                    <p>Leading end-to-end digital operations, AI automation pipelines, SEO strategy, and Meta/Google ad campaigns. Built from scratch to full client delivery.</p>
+                </div>
+                <div class="card">
+                    <h3>FACT Orbit & SCARRED</h3>
+                    <span class="card-sub">Content Creator & Brand Designer</span>
+                    <p>Managing 'FACT Orbit' YouTube channel. Architecting 'SCARRED' clothing brand—merging fashion with high-end graphic storytelling.</p>
                 </div>
             </section>
 
             <section>
-                <div class="section-title">Key Competencies</div>
-                <div class="pill-container">
-                    <span class="pill">Prompt Engineering</span>
-                    <span class="pill">SEO Dominance</span>
-                    <span class="pill">n8n Automation</span>
-                    <span class="pill">Vibe Coding</span>
-                    <span class="pill">Strategic Branding</span>
+                <div class="section-title">Professional Expertise (Timeline)</div>
+                <div class="skill-list">
+                    <div class="skill-item"><strong>Prompt Engineering</strong>3 Years Experience</div>
+                    <div class="skill-item"><strong>Digital Marketing</strong>2.5 Years Experience</div>
+                    <div class="skill-item"><strong>Research Specialist</strong>5 Years Experience</div>
+                    <div class="skill-item"><strong>AI Tool Mastery</strong>4 Years Experience</div>
+                    <div class="skill-item"><strong>Graphic Design</strong>1.5+ Years Experience</div>
+                    <div class="skill-item"><strong>Storytelling/Scripts</strong>3 Years Experience</div>
+                </div>
+            </section>
+
+            <section style="margin-top: 15px;">
+                <div class="section-title">Academic Background</div>
+                <div class="edu-item">
+                    <h4>Higher Secondary (12th) - Science</h4>
+                    <p>Bihar School Examination Board (BSEB) | 2024 - 2026</p>
+                </div>
+                <div class="edu-item">
+                    <h4>Matriculation (10th)</h4>
+                    <p>Bihar School Examination Board (BSEB) | Completed 2024</p>
                 </div>
             </section>
         </div>
 
         <div class="right-col">
             <section>
-                <div class="section-title">Technical Skills</div>
-                <div class="stat-box">
-                    <span class="stat-label">AI PROMPTING</span>
+                <div class="section-title">Technical Proficiency</div>
+                <div class="stat-row">
+                    <div class="stat-label">AI AGENTS & PROMPTING <span>95%</span></div>
                     <div class="stat-bar"><div class="stat-fill" style="width: 95%;"></div></div>
                 </div>
-                <div class="stat-box">
-                    <span class="stat-label">DIGITAL MARKETING</span>
-                    <div class="stat-bar"><div class="stat-fill" style="width: 90%;"></div></div>
+                <div class="stat-row">
+                    <div class="stat-label">VIBE CODING (JS/PY) <span>88%</span></div>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 88%;"></div></div>
                 </div>
-                <div class="stat-box">
-                    <span class="stat-label">SYSTEM LOGIC</span>
+                <div class="stat-row">
+                    <div class="stat-label">SEO & ADS (PPC) <span>92%</span></div>
+                    <div class="stat-bar"><div class="stat-fill" style="width: 92%;"></div></div>
+                </div>
+                <div class="stat-row">
+                    <div class="stat-label">VIDEO EDITING <span>85%</span></div>
                     <div class="stat-bar"><div class="stat-fill" style="width: 85%;"></div></div>
                 </div>
             </section>
 
-            <section style="margin-top: 30px;">
-                <div class="section-title">Education</div>
-                <div style="border-left: 2px solid var(--accent-tertiary); padding-left: 15px;">
-                    <p style="font-weight: 700; font-size: 12px;">12th Science Stream</p>
-                    <p style="font-size: 11px; color: var(--text-dim);">BSEB, Patna (2026)</p>
+            <section style="margin-top: 25px;">
+                <div class="section-title">Tools & Frameworks</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                    <span style="font-size: 9px; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;">n8n</span>
+                    <span style="font-size: 9px; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;">Supabase</span>
+                    <span style="font-size: 9px; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;">GitHub</span>
+                    <span style="font-size: 9px; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;">Canva/PS</span>
+                    <span style="font-size: 9px; border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px;">Claude/GPT-4</span>
                 </div>
             </section>
 
-            <section style="margin-top: 30px;">
-                <div class="section-title">Bio Details</div>
-                <div style="font-size: 11px; line-height: 2;">
-                    <div style="display: flex; justify-content: space-between;"><span>Date of Birth:</span> <strong>14 Oct 2008</strong></div>
-                    <div style="display: flex; justify-content: space-between;"><span>Nationality:</span> <strong>Indian</strong></div>
-                    <div style="display: flex; justify-content: space-between;"><span>Gender:</span> <strong>Male</strong></div>
+            <section style="margin-top: 25px;">
+                <div class="section-title">Personal Data</div>
+                <div style="font-size: 10px; line-height: 2;">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border);"><span>Full Name:</span> <strong>Abhishek Kumar</strong></div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border);"><span>D.O.B:</span> <strong>14 Oct 2008</strong></div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border);"><span>Nationality:</span> <strong>Indian</strong></div>
+                    <div style="display: flex; justify-content: space-between;"><span>Hobbies:</span> <strong>Learning, Travel</strong></div>
                 </div>
             </section>
         </div>
     </div>
 
-    <footer style="text-align: center; border-top: 1px solid var(--border); padding-top: 20px;">
-        <p style="font-size: 10px; color: var(--text-dim); letter-spacing: 2px;">ONYXPLUS ECOSYSTEM © 2026</p>
+    <footer style="margin-top: 15px; padding-top: 10px; border-top: 1px solid var(--border); text-align: center;">
+        <p style="font-size: 9px; color: var(--text-dim); font-style: italic;">"True to the best of my knowledge & belief. Building the Indian Ecosystem."</p>
     </footer>
 </div>
 
